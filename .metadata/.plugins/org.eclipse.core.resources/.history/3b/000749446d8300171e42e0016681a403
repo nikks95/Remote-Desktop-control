@@ -1,0 +1,40 @@
+package server;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class SetPassword extends JFrame implements ActionListener{
+	
+	static String port = "4907";
+	
+	private JPanel panel;
+	private JLabel label1;
+	private JButton okButton,cancelButton;
+	
+	public SetPassword() {
+		 label1=new JLabel();
+		 label1.setText("Would you like to start the Server?");
+		 
+		 this.setLayout(new BorderLayout());
+		 
+		 okButton = new JButton("Yes..");
+		 cancelButton = new JButton("No");
+		 
+		 panel=new JPanel(new GridLayout(2,1));
+		 
+		 panel.add(label1);
+		 panel.add(okButton);
+		 panel.add(cancelButton);
+		 
+		 add(panel,BorderLayout.CENTER);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

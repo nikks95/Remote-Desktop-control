@@ -1,0 +1,23 @@
+package server;
+
+import java.io.*;
+import java.net.ServerSocket;
+
+public class InitConnection {
+
+	private int port;
+	
+	ServerSocket socket = null;
+	DataInputStream password = null;
+	DataOutputStream verify = null;
+	
+	public InitConnection(int port) {
+		this.port = port;
+		try {
+			socket = new ServerSocket(port);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

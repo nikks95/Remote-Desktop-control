@@ -1,0 +1,9 @@
+package server;
+
+public class InitConnection {
+
+	private int port;
+	public InitConnection(int port) {
+		this.port = port;
+	}
+}

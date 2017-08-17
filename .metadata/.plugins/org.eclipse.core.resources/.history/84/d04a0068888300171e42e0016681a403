@@ -1,0 +1,37 @@
+package server;
+
+import java.io.*;
+import java.net.*;
+
+public class InitConnection {
+
+	private int port;
+	
+	ServerSocket socket = null;
+	DataInputStream din = null;
+	DataOutputStream dout = null;
+	
+	public InitConnection(int port) {
+		this.port = port;
+		try {
+			socket = new ServerSocket(port);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	 class ConnectionManager extends Thread{
+		 
+		 Socket socket = null;
+		 DataInputStream dIn = null;
+		 DataOutputStream dOut = null;
+		 
+		 public ConnectionManager(Socket socket) {
+			 this.socket = socket;
+			 dIn = new DataInputStream(socket.getInputStream());
+			 dOut = new DataOutputStream(socket.getOutputStream());
+		 }
+		 
+		 
+	 } 
+}
